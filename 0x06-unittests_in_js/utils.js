@@ -12,9 +12,9 @@ class Utils {
             break;
 	case 'DIVIDE':
 	    if (bat === 0) {
-		c = "Error";
+			c = "Error";
 	    } else {
-		c = ant / bat;
+			c = ant / bat;
 	    }
 	    break;
 	}

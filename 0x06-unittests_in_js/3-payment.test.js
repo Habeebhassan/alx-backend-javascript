@@ -5,12 +5,12 @@ const Utils = require("./utils");
 const assert = require("assert");
 
 describe("sendPaymentRequestToApi", function() {
-    it("check that Utils.calculateNumber was called once", function() {
-	const spy = sinon.spy(Utils, "calculateNumber");
-
-	sendPaymentRequestToApi(50, 24.52);
-
-	assert(spy.calledOnce);
-	spy.restore();
-    });
-});
+    it("check that Utils.calculateNumber is stubbed", function() {
+		const spy = sinon.spy(console, "log");
+		const stub = sinon.stub(Utils, "calculateNumber").returns(10);
+		sendPaymentRequestToApi(500, 50);
+	
+		assert(spy.withArgs("The total is: 10").calledOnce);
+		assert(stub.withArgs("SUM", 500, 50).calledOnce);
+		});
+	});

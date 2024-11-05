@@ -4,18 +4,18 @@ function calculateNumber(type, a, b) {
     let c = 0;
     switch (type) {
     case 'SUM':
-	c = ant + bat;
-	break;
+	    c = ant + bat;
+	    break;
     case 'SUBTRACT':
-	c = ant - bat;
-	break;
+	    c = ant - bat;
+	    break;
     case 'DIVIDE':
-      if (bat === 0) {
+        if (bat === 0) {
             c = "Error";
-      } else {
+        } else {
             c = ant / bat;
-      }
-      break;
+        }
+        break;
     }
     return c;
 }
